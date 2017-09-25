@@ -121,8 +121,8 @@ ui <- dashboardPage(skin = "blue",
                         tabItem(tabName = "apresentacao", h2("Atenção Primária em Florianópolis"),
                                 fluidRow(
                                   mainPanel(
-                                    p("A atenção primãria é uma estratégia de organização da atenção à saúde voltada para responder de forma regionalizada, contínua e sistematizada à maior parte das necessidades de saúde de uma população."),
-                                    p("No Brasil, seu principal efetor são as equipes de saúde da família"),
+                                    p("A atenção primária é uma estratégia de organização da atenção à saúde voltada para responder de forma regionalizada, contínua e sistematizada à maior parte das necessidades de saúde de uma população."),
+                                    p("No Brasil, seu principal efetor são as equipes de saúde da família."),
                                     p("Florianópolis destaca-se nacionalmente por ser a única capital com 100% de cobertura de atenção primária e por possuir os melhores resultados no PMAQ."),
                                     p("Ela é composta por Centros de Saúde, dividios em distritos sanitários. Cada 
                                       Centro de Saúde, por sua vez, é formado por uma ou mais Equipes de Saúde da Família.
