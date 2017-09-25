@@ -16,37 +16,34 @@ library(ggvis)
 
 
 
-########################################################################################### 
-#Setando o português como lingua para data
-Sys.setlocale("LC_TIME","Portuguese_Brazil.1252")
-########################################################################################### 
+
 #Banco de dados para o mapa
-acesso_dat <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/acesso_dat_final.csv", 
+acesso_dat <- read_csv("acesso_dat_final.csv", 
                        col_types = cols(BIENIO = col_factor(levels = c("2013/2014", 
                                                                        "2015/2016")), DISTRITO = col_factor(levels = c("Centro", 
                                                                                                                        "Continente", "Norte", "Sul"))))
 ########################################################################################### 
 #Banco de dados de acesso
 #dados de pacientes diferentes por trimestre - florianópolis
-pc_florianopolis <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/pacientes diferentes/pc_florianopolis.csv", 
+pc_florianopolis <- read_csv("base_de_dados/preparadas/pacientes diferentes/pc_florianopolis.csv", 
                              col_types = cols(VALOR = col_integer()))
 pc_florianopolis$ESPECIALIDADE <- as.factor(pc_florianopolis$ESPECIALIDADE)
 pc_florianopolis$TRIMESTRE <- as.factor(pc_florianopolis$TRIMESTRE)
 
 #dados de pacientes diferentes por trimestre - distritos
-pc_distrito <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/pacientes diferentes/pc_distrito.csv", 
+pc_distrito <- read_csv("base_de_dados/preparadas/pacientes diferentes/pc_distrito.csv", 
                         col_types = cols(VALOR = col_integer()))
 pc_distrito$ESPECIALIDADE <- as.factor(pc_distrito$ESPECIALIDADE)
 pc_distrito$TRIMESTRE <- as.factor(pc_distrito$TRIMESTRE)
 
 #dados de pacientes diferentes por trimestre - cs
-pc_cs <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/pacientes diferentes/pc_cs.csv", 
+pc_cs <- read_csv("base_de_dados/preparadas/pacientes diferentes/pc_cs.csv", 
                   col_types = cols(VALOR = col_integer()))
 pc_cs$ESPECIALIDADE <- as.factor(pc_cs$ESPECIALIDADE)
 pc_cs$TRIMESTRE <- as.factor(pc_cs$TRIMESTRE)
 
 #dados de pacientes diferentes por trimestre - esf
-pc_esf <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/pacientes diferentes/pc_esf.csv", 
+pc_esf <- read_csv("base_de_dados/preparadas/pacientes diferentes/pc_esf.csv", 
                    col_types = cols(VALOR = col_integer()))
 pc_esf$ESPECIALIDADE <- as.factor(pc_esf$ESPECIALIDADE)
 pc_esf$AREA <- as.factor(pc_esf$AREA)
@@ -54,38 +51,38 @@ pc_esf$TRIMESTRE <- as.factor(pc_esf$TRIMESTRE)
 ########################################################################################### 
 #Banco de dados de longitudinalidade
 ###########################################################################################
-gestantes_florianopolis <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/gestantes/gestantes_florianopolis.csv")
+gestantes_florianopolis <- read_csv("base_de_dados/preparadas/gestantes/gestantes_florianopolis.csv")
 gestantes_florianopolis$TRIMESTRE_PARTO <- as.factor(gestantes_florianopolis$TRIMESTRE_PARTO)
 gestantes_florianopolis$TIPO <- as.factor(gestantes_florianopolis$TIPO)
-gestantes_distrito <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/gestantes/gestantes_distrito.csv")
+gestantes_distrito <- read_csv("base_de_dados/preparadas/gestantes/gestantes_distrito.csv")
 gestantes_distrito$DISTRITO <- as.factor(gestantes_distrito$DISTRITO)
 gestantes_distrito$TRIMESTRE_PARTO <- as.factor(gestantes_distrito$TRIMESTRE_PARTO)
 gestantes_distrito$TIPO <- as.factor(gestantes_distrito$TIPO)
-gestantes_cs <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/gestantes/gestantes_cs.csv")
+gestantes_cs <- read_csv("base_de_dados/preparadas/gestantes/gestantes_cs.csv")
 gestantes_cs$DISTRITO <- as.factor(gestantes_cs$DISTRITO)
 gestantes_cs$UNIDADE <- as.factor(gestantes_cs$UNIDADE)
 gestantes_cs$TRIMESTRE_PARTO <- as.factor(gestantes_cs$TRIMESTRE_PARTO)
 gestantes_cs$TIPO <- as.factor(gestantes_cs$TIPO)
-gestantes_esf <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/gestantes/gestantes_esf.csv", 
+gestantes_esf <- read_csv("base_de_dados/preparadas/gestantes/gestantes_esf.csv", 
                           col_types = cols(VALOR = col_number()))
 gestantes_esf$AREA <- as.factor(gestantes_esf$AREA)
 
 ########################################################################################### 
 #Banco de dados de integralidade
 ###########################################################################################
-encam_med_florianopolis <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/encaminhamentos/encam_med_florianopolis.csv",
+encam_med_florianopolis <- read_csv("base_de_dados/preparadas/encaminhamentos/encam_med_florianopolis.csv",
                                     col_types = cols(VALOR = col_double()))
-encam_med_distrito <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/encaminhamentos/encam_med_distrito.csv", 
+encam_med_distrito <- read_csv("base_de_dados/preparadas/encaminhamentos/encam_med_distrito.csv", 
                                col_types = cols(VALOR = col_double()))
-encam_med_cs <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/encaminhamentos/encam_med_cs.csv", 
+encam_med_cs <- read_csv("base_de_dados/preparadas/encaminhamentos/encam_med_cs.csv", 
                          col_types = cols(VALOR = col_double()))
-encam_med_esf <- read_csv("C:/Users/hp1806/Google Drive/RStudio/sala_situacao_aps/sala_situacao_aps/base_de_dados/preparadas/encaminhamentos/encam_med_esf.csv", 
+encam_med_esf <- read_csv("base_de_dados/preparadas/encaminhamentos/encam_med_esf.csv", 
                           col_types = cols(VALOR = col_double()))
 encam_med_esf$AREA <- as.factor(encam_med_esf$AREA)
 ########################################################################################### 
 ui <- dashboardPage(skin = "blue",
                     ########################################################################################### 
-                    dashboardHeader(title = "Sala de Situação da Atenção Primária-Florianópolis", titleWidth = 550),
+                    dashboardHeader(title = "Sala de Situação da APS - Versão para Teste", titleWidth = 550),
                     ########################################################################################### 
                     dashboardSidebar(
                       ########################################################################################### 
@@ -107,12 +104,13 @@ ui <- dashboardPage(skin = "blue",
                                  menuSubItem("Acesso", tabName = "acesso_esf"),
                                  menuSubItem("Longitudinalidade", tabName = "longitudinalidade_esf"),
                                  menuSubItem("Integralidade", tabName = "integralidade_esf")),
-                        #menuItem("Estudos", tabName = "graficos", icon = icon("bar-chart")),
+                        menuItem("Instruções", icon = icon("question-circle"),
+                                  href = "https://github.com/analisededadosemsaudefloripa/saladesituacao/wiki/Instru%C3%A7%C3%B5es-para-Utiliza%C3%A7%C3%A3o-das-Salas-de-Situa%C3%A7%C3%A3o-em-Sa%C3%BAde"),
                         menuItem("Dados", tabName = "dados", icon = icon("database")),
-                        menuItem("Código-fonte", icon = icon("file-code-o"), 
-                                 href = "https://github.com/analisededadosemsaudefloripa/sala_situacao_abs/blob/master/app.R"),
+                        menuItem("Código-fonte", icon = icon("code"), 
+                                 href = "https://github.com/analisededadosemsaudefloripa/saladesituacao/blob/atencao_primaria/app.R"),
                         menuItem("Licença de Uso", icon = icon("cc"), 
-                                 href = "https://github.com/analisededadosemsaudefloripa/sala_situacao_abs/blob/master/LICENSE")
+                                 href = "https://github.com/analisededadosemsaudefloripa/saladesituacao/blob/atencao_primaria/LICENSE")
                       )
                     ),
                     ########################################################################################### 
@@ -138,16 +136,7 @@ ui <- dashboardPage(skin = "blue",
                                   valueBoxOutput("infoPopulação"),
                                   valueBoxOutput("infoNumEquipes"),
                                   valueBoxOutput("infoCobertura")
-                                ),
-                                fluidRow(
-                                  mainPanel(
-                                    h1("Obejtivos e Utilização"),
-                                    p("Este painel tem o objetivo da aumentar melhorar ainda mais os resultados
-                                      da atenção primária municipal"),
-                                    p("Para tanto, ele busca comunicar-se com gestores, trabalhadores e cidadãos e pode
-                                      ser utilizado, assim e assado.")
-                                    )
-                                    )
+                                )
                                   ),
                         ###########################################################################################
                         #Florianópolis
