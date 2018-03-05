@@ -30,24 +30,18 @@ dados_upas <- read_csv("base_de_dados/extraidas/dados_upas.csv")
 #Norte
 ##Médico
 atendimentos_med_norte_mes <- read_csv("base_de_dados/transformadas/atendimentos_med_norte_mes.csv")
-atendimentos_med_norte_mes$DATA <- as.yearmon(atendimentos_med_norte_mes$DATA, format = "%b %Y") 
-atendimentos_med_norte_mes$DATA <- as.Date(atendimentos_med_norte_mes$DATA, format = "%d-%m-%Y") 
 atendimentos_med_norte_dia <- read_csv("base_de_dados/transformadas/atendimentos_med_norte_dia.csv")
 atendimentos_med_norte_dia$DIA <- factor(atendimentos_med_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 atendimentos_med_norte_hora <- read_csv("base_de_dados/transformadas/atendimentos_med_norte_hora.csv")
 atendimentos_med_norte_hora$HORA <- as.numeric(atendimentos_med_norte_hora$HORA)
 #Classificação de Risco
 atendimentos_classificacao_norte_mes <- read_csv("base_de_dados/transformadas/atendimentos_classificacao_norte_mes.csv")
-atendimentos_classificacao_norte_mes$DATA <- as.yearmon(atendimentos_classificacao_norte_mes$DATA, format = "%b %Y") 
-atendimentos_classificacao_norte_mes$DATA <- as.Date(atendimentos_classificacao_norte_mes$DATA, format = "%d-%m-%Y") 
 atendimentos_classificacao_norte_dia <- read_csv("base_de_dados/transformadas/atendimentos_classificacao_norte_dia.csv")
 atendimentos_classificacao_norte_dia$DIA <- factor(atendimentos_classificacao_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 atendimentos_classificacao_norte_hora <- read_csv("base_de_dados/transformadas/atendimentos_classificacao_norte_hora.csv")
 atendimentos_classificacao_norte_hora$HORA <- as.numeric(atendimentos_classificacao_norte_hora$HORA)
 #Odontologia
 atendimentos_odontologia_norte_mes <- read_csv("base_de_dados/transformadas/atendimentos_odontologia_norte_mes.csv")
-atendimentos_odontologia_norte_mes$DATA <- as.yearmon(atendimentos_odontologia_norte_mes$DATA, format = "%b %Y") 
-atendimentos_odontologia_norte_mes$DATA <- as.Date(atendimentos_odontologia_norte_mes$DATA, format = "%d-%m-%Y") 
 atendimentos_odontologia_norte_dia <- read_csv("base_de_dados/transformadas/atendimentos_odontologia_norte_dia.csv")
 atendimentos_odontologia_norte_dia$DIA <- factor(atendimentos_odontologia_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 atendimentos_odontologia_norte_hora <- read_csv("base_de_dados/transformadas/atendimentos_odontologia_norte_hora.csv")
@@ -58,24 +52,18 @@ atendimentos_odontologia_norte_hora$HORA <- as.numeric(atendimentos_odontologia_
 #Sul
 ##Médico
 atendimentos_med_sul_mes <- read_csv("base_de_dados/transformadas/atendimentos_med_sul_mes.csv")
-atendimentos_med_sul_mes$DATA <- as.yearmon(atendimentos_med_sul_mes$DATA, format = "%b %Y") 
-atendimentos_med_sul_mes$DATA <- as.Date(atendimentos_med_sul_mes$DATA, format = "%d-%m-%Y") 
 atendimentos_med_sul_dia <- read_csv("base_de_dados/transformadas/atendimentos_med_sul_dia.csv")
 atendimentos_med_sul_dia$DIA <- factor(atendimentos_med_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 atendimentos_med_sul_hora <- read_csv("base_de_dados/transformadas/atendimentos_med_sul_hora.csv")
 atendimentos_med_sul_hora$HORA <- as.numeric(atendimentos_med_sul_hora$HORA)
 #Classificação de Risco
 atendimentos_classificacao_sul_mes <- read_csv("base_de_dados/transformadas/atendimentos_classificacao_sul_mes.csv")
-atendimentos_classificacao_sul_mes$DATA <- as.yearmon(atendimentos_classificacao_sul_mes$DATA, format = "%b %Y") 
-atendimentos_classificacao_sul_mes$DATA <- as.Date(atendimentos_classificacao_sul_mes$DATA, format = "%d-%m-%Y") 
 atendimentos_classificacao_sul_dia <- read_csv("base_de_dados/transformadas/atendimentos_classificacao_sul_dia.csv")
 atendimentos_classificacao_sul_dia$DIA <- factor(atendimentos_classificacao_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 atendimentos_classificacao_sul_hora <- read_csv("base_de_dados/transformadas/atendimentos_classificacao_sul_hora.csv")
 atendimentos_classificacao_sul_hora$HORA <- as.numeric(atendimentos_classificacao_sul_hora$HORA)
 #Odontologia
 atendimentos_odontologia_sul_mes <- read_csv("base_de_dados/transformadas/atendimentos_odontologia_sul_mes.csv")
-atendimentos_odontologia_sul_mes$DATA <- as.yearmon(atendimentos_odontologia_sul_mes$DATA, format = "%b %Y") 
-atendimentos_odontologia_sul_mes$DATA <- as.Date(atendimentos_odontologia_sul_mes$DATA, format = "%d-%m-%Y") 
 atendimentos_odontologia_sul_dia <- read_csv("base_de_dados/transformadas/atendimentos_odontologia_sul_dia.csv")
 atendimentos_odontologia_sul_dia$DIA <- factor(atendimentos_odontologia_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 atendimentos_odontologia_sul_hora <- read_csv("base_de_dados/transformadas/atendimentos_odontologia_sul_hora.csv")
@@ -87,24 +75,18 @@ atendimentos_odontologia_sul_hora$HORA <- as.numeric(atendimentos_odontologia_su
 #Norte
 ##Médico
 tempo_med_norte_mes <- read_csv("base_de_dados/transformadas/tempo_med_norte_mes.csv")
-tempo_med_norte_mes$DATA <- as.yearmon(tempo_med_norte_mes$DATA, format = "%b %Y") 
-tempo_med_norte_mes$DATA <- as.Date(tempo_med_norte_mes$DATA, format = "%d-%m-%Y") 
 tempo_med_norte_dia <- read_csv("base_de_dados/transformadas/tempo_med_norte_dia.csv")
 tempo_med_norte_dia$DIA <- factor(tempo_med_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 tempo_med_norte_hora <- read_csv("base_de_dados/transformadas/tempo_med_norte_hora.csv")
 tempo_med_norte_hora$HORA <- as.numeric(tempo_med_norte_hora$HORA)
 #Classificação de Risco
 tempo_classificacao_norte_mes <- read_csv("base_de_dados/transformadas/tempo_classificacao_norte_mes.csv")
-tempo_classificacao_norte_mes$DATA <- as.yearmon(tempo_classificacao_norte_mes$DATA, format = "%b %Y") 
-tempo_classificacao_norte_mes$DATA <- as.Date(tempo_classificacao_norte_mes$DATA, format = "%d-%m-%Y") 
 tempo_classificacao_norte_dia <- read_csv("base_de_dados/transformadas/tempo_classificacao_norte_dia.csv")
 tempo_classificacao_norte_dia$DIA <- factor(tempo_classificacao_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 tempo_classificacao_norte_hora <- read_csv("base_de_dados/transformadas/tempo_classificacao_norte_hora.csv")
 tempo_classificacao_norte_hora$HORA <- as.numeric(tempo_classificacao_norte_hora$HORA)
 #Odontologia
 tempo_odontologia_norte_mes <- read_csv("base_de_dados/transformadas/tempo_odontologia_norte_mes.csv")
-tempo_odontologia_norte_mes$DATA <- as.yearmon(tempo_odontologia_norte_mes$DATA, format = "%b %Y") 
-tempo_odontologia_norte_mes$DATA <- as.Date(tempo_odontologia_norte_mes$DATA, format = "%d-%m-%Y") 
 tempo_odontologia_norte_dia <- read_csv("base_de_dados/transformadas/tempo_odontologia_norte_dia.csv")
 tempo_odontologia_norte_dia$DIA <- factor(tempo_odontologia_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 tempo_odontologia_norte_hora <- read_csv("base_de_dados/transformadas/tempo_odontologia_norte_hora.csv")
@@ -113,24 +95,18 @@ tempo_odontologia_norte_hora$HORA <- as.numeric(tempo_odontologia_norte_hora$HOR
 #Sul
 ##Médico
 tempo_med_sul_mes <- read_csv("base_de_dados/transformadas/tempo_med_sul_mes.csv")
-tempo_med_sul_mes$DATA <- as.yearmon(tempo_med_sul_mes$DATA, format = "%b %Y") 
-tempo_med_sul_mes$DATA <- as.Date(tempo_med_sul_mes$DATA, format = "%d-%m-%Y") 
 tempo_med_sul_dia <- read_csv("base_de_dados/transformadas/tempo_med_sul_dia.csv")
 tempo_med_sul_dia$DIA <- factor(tempo_med_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 tempo_med_sul_hora <- read_csv("base_de_dados/transformadas/tempo_med_sul_hora.csv")
 tempo_med_sul_hora$HORA <- as.numeric(tempo_med_sul_hora$HORA)
 #Classificação de Risco
 tempo_classificacao_sul_mes <- read_csv("base_de_dados/transformadas/tempo_classificacao_sul_mes.csv")
-tempo_classificacao_sul_mes$DATA <- as.yearmon(tempo_classificacao_sul_mes$DATA, format = "%b %Y") 
-tempo_classificacao_sul_mes$DATA <- as.Date(tempo_classificacao_sul_mes$DATA, format = "%d-%m-%Y") 
 tempo_classificacao_sul_dia <- read_csv("base_de_dados/transformadas/tempo_classificacao_sul_dia.csv")
 tempo_classificacao_sul_dia$DIA <- factor(tempo_classificacao_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 tempo_classificacao_sul_hora <- read_csv("base_de_dados/transformadas/tempo_classificacao_sul_hora.csv")
 tempo_classificacao_sul_hora$HORA <- as.numeric(tempo_classificacao_sul_hora$HORA)
 #Odontologia
 tempo_odontologia_sul_mes <- read_csv("base_de_dados/transformadas/tempo_odontologia_sul_mes.csv")
-tempo_odontologia_sul_mes$DATA <- as.yearmon(tempo_odontologia_sul_mes$DATA, format = "%b %Y") 
-tempo_odontologia_sul_mes$DATA <- as.Date(tempo_odontologia_sul_mes$DATA, format = "%d-%m-%Y") 
 tempo_odontologia_sul_dia <- read_csv("base_de_dados/transformadas/tempo_odontologia_sul_dia.csv")
 tempo_odontologia_sul_dia$DIA <- factor(tempo_odontologia_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 tempo_odontologia_sul_hora <- read_csv("base_de_dados/transformadas/tempo_odontologia_sul_hora.csv")
@@ -138,29 +114,23 @@ tempo_odontologia_sul_hora$HORA <- as.numeric(tempo_odontologia_sul_hora$HORA)
 
 
 ########################################################################################### 
-#Bancos de dados de tepo de Espera
+#Bancos de dados de tempo de Espera
 ##########################################################################################
 #Norte
 ##Médico
 espera_med_norte_mes <- read_csv("base_de_dados/transformadas/espera_med_norte_mes.csv")
-espera_med_norte_mes$DATA <- as.yearmon(espera_med_norte_mes$DATA, format = "%b %Y") 
-espera_med_norte_mes$DATA <- as.Date(espera_med_norte_mes$DATA, format = "%d-%m-%Y") 
 espera_med_norte_dia <- read_csv("base_de_dados/transformadas/espera_med_norte_dia.csv")
 espera_med_norte_dia$DIA <- factor(espera_med_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 espera_med_norte_hora <- read_csv("base_de_dados/transformadas/espera_med_norte_hora.csv")
 espera_med_norte_hora$HORA <- as.numeric(espera_med_norte_hora$HORA)
 ##Classificação
 espera_classificacao_norte_mes <- read_csv("base_de_dados/transformadas/espera_classificacao_norte_mes.csv")
-espera_classificacao_norte_mes$DATA <- as.yearmon(espera_classificacao_norte_mes$DATA, format = "%b %Y") 
-espera_classificacao_norte_mes$DATA <- as.Date(espera_classificacao_norte_mes$DATA, format = "%d-%m-%Y") 
 espera_classificacao_norte_dia <- read_csv("base_de_dados/transformadas/espera_classificacao_norte_dia.csv")
 espera_classificacao_norte_dia$DIA <- factor(espera_classificacao_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 espera_classificacao_norte_hora <- read_csv("base_de_dados/transformadas/espera_classificacao_norte_hora.csv")
 espera_classificacao_norte_hora$HORA <- as.numeric(espera_classificacao_norte_hora$HORA)
 ##Odontologia
 espera_odontologia_norte_mes <- read_csv("base_de_dados/transformadas/espera_odontologia_norte_mes.csv")
-espera_odontologia_norte_mes$DATA <- as.yearmon(espera_odontologia_norte_mes$DATA, format = "%b %Y") 
-espera_odontologia_norte_mes$DATA <- as.Date(espera_odontologia_norte_mes$DATA, format = "%d-%m-%Y") 
 espera_odontologia_norte_dia <- read_csv("base_de_dados/transformadas/espera_odontologia_norte_dia.csv")
 espera_odontologia_norte_dia$DIA <- factor(espera_odontologia_norte_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 espera_odontologia_norte_hora <- read_csv("base_de_dados/transformadas/espera_odontologia_norte_hora.csv")
@@ -171,24 +141,18 @@ espera_odontologia_norte_hora$HORA <- as.numeric(espera_odontologia_norte_hora$H
 #Norte
 ##Médico
 espera_med_sul_mes <- read_csv("base_de_dados/transformadas/espera_med_sul_mes.csv")
-espera_med_sul_mes$DATA <- as.yearmon(espera_med_sul_mes$DATA, format = "%b %Y") 
-espera_med_sul_mes$DATA <- as.Date(espera_med_sul_mes$DATA, format = "%d-%m-%Y") 
 espera_med_sul_dia <- read_csv("base_de_dados/transformadas/espera_med_sul_dia.csv")
 espera_med_sul_dia$DIA <- factor(espera_med_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 espera_med_sul_hora <- read_csv("base_de_dados/transformadas/espera_med_sul_hora.csv")
 espera_med_sul_hora$HORA <- as.numeric(espera_med_sul_hora$HORA)
 ##Classificação
 espera_classificacao_sul_mes <- read_csv("base_de_dados/transformadas/espera_classificacao_sul_mes.csv")
-espera_classificacao_sul_mes$DATA <- as.yearmon(espera_classificacao_sul_mes$DATA, format = "%b %Y") 
-espera_classificacao_sul_mes$DATA <- as.Date(espera_classificacao_sul_mes$DATA, format = "%d-%m-%Y") 
 espera_classificacao_sul_dia <- read_csv("base_de_dados/transformadas/espera_classificacao_sul_dia.csv")
 espera_classificacao_sul_dia$DIA <- factor(espera_classificacao_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 espera_classificacao_sul_hora <- read_csv("base_de_dados/transformadas/espera_classificacao_sul_hora.csv")
 espera_classificacao_sul_hora$HORA <- as.numeric(espera_classificacao_sul_hora$HORA)
 ##Odontologia
 espera_odontologia_sul_mes <- read_csv("base_de_dados/transformadas/espera_odontologia_sul_mes.csv")
-espera_odontologia_sul_mes$DATA <- as.yearmon(espera_odontologia_sul_mes$DATA, format = "%b %Y") 
-espera_odontologia_sul_mes$DATA <- as.Date(espera_odontologia_sul_mes$DATA, format = "%d-%m-%Y") 
 espera_odontologia_sul_dia <- read_csv("base_de_dados/transformadas/espera_odontologia_sul_dia.csv")
 espera_odontologia_sul_dia$DIA <- factor(espera_odontologia_sul_dia$DIA, levels = c("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb","Dom"))
 espera_odontologia_sul_hora <- read_csv("base_de_dados/transformadas/espera_odontologia_sul_hora.csv")
@@ -889,7 +853,6 @@ server <- function(input, output, session) {
   output$num_atd_medicos_norte_mes_plot <- renderPlotly({
     
     
-    
     if(input$num_atd_medicos_norte_especialidade == "Comparação"){
       
       medicos_norte_mes <- atendimentos_med_norte_mes %>%
@@ -901,20 +864,31 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))
       
     }else if (input$num_atd_medicos_norte_especialidade == "Total"){
       
       medicos_norte_mes <- atendimentos_med_norte_mes  %>%
-       filter(ESPECIALIDADE == "Total") 
+       filter(ESPECIALIDADE == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+         
       
       a<-ggplot(medicos_norte_mes, aes(x = as.factor(DATA))) + 
-        geom_col(aes(y = QUANTIDADE, fill = VARIAVEL))+ 
+        geom_col(aes(y = QUANTIDADE, fill = QUANTIDADE))+ 
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
-      
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        geom_hline(yintercept = 10125,col = "red", size = 0.5)+
+        geom_hline(yintercept = 9000, col = "red", size = 0.5)+
+        geom_hline(yintercept = 7875, col = "red", size = 0.5)+
+        geom_hline(yintercept = 6750, col = "red", size = 0.5)+
+        geom_hline(yintercept = 5625, col = "red", size = 0.5)+
+        geom_hline(yintercept = 4500, col = "red", size = 0.5)+
+        geom_hline(yintercept = 3375, col = "red", size = 0.5)+
+        geom_hline(yintercept = 2250, col = "red", size = 0.5)+
+        scale_y_continuous(breaks = c(0, 2250,3375,4500,5625,6750,7875,9000,10125,11000,12000,13000,14000,15000),limits=c(0,16000))
       
     }else{
       
@@ -926,7 +900,8 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))}
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))}
     
     
     ggplotly(a)
@@ -946,7 +921,9 @@ server <- function(input, output, session) {
     }else if (input$num_atd_medicos_norte_especialidade == "Total"){
       
       medicos_norte_mes <- atendimentos_med_norte_mes  %>%
-       filter(ESPECIALIDADE == "Total") 
+       filter(ESPECIALIDADE == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+          
       
     }else{
       
@@ -1585,19 +1562,32 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))
       
     }else if (input$num_atd_classificacao_norte_tipo == "Total"){
       
       atendimentos_classificacao_norte_mes <- atendimentos_classificacao_norte_mes  %>%
-       filter(CLASSIFICACAO == "Total") 
+       filter(CLASSIFICACAO == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+          
       
       a<-ggplot(atendimentos_classificacao_norte_mes, aes(x = as.factor(DATA))) + 
-        geom_col(aes(y = QUANTIDADE, fill = VARIAVEL))+ 
+        geom_col(aes(y = QUANTIDADE, fill = QUANTIDADE))+ 
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        geom_hline(yintercept = 10125,col = "red", size = 0.5)+
+        geom_hline(yintercept = 9000, col = "red", size = 0.5)+
+        geom_hline(yintercept = 7875, col = "red", size = 0.5)+
+        geom_hline(yintercept = 6750, col = "red", size = 0.5)+
+        geom_hline(yintercept = 5625, col = "red", size = 0.5)+
+        geom_hline(yintercept = 4500, col = "red", size = 0.5)+
+        geom_hline(yintercept = 3375, col = "red", size = 0.5)+
+        geom_hline(yintercept = 2250, col = "red", size = 0.5)+
+        scale_y_continuous(breaks = c(0, 2250,3375,4500,5625,6750,7875,9000,10125,11000,12000,13000,14000,15000),limits=c(0,16000))
+      
       
       
     }else{
@@ -1610,7 +1600,8 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))}
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))}
     
     
     ggplotly(a)
@@ -1629,7 +1620,9 @@ server <- function(input, output, session) {
     }else if (input$num_atd_classificacao_norte_tipo == "Total"){
       
       atendimentos_classificacao_norte_mes <- atendimentos_classificacao_norte_mes  %>%
-       filter(CLASSIFICACAO == "Total") 
+       filter(CLASSIFICACAO == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+          
       
 
     }else{
@@ -2612,19 +2605,31 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))
       
     }else if (input$num_atd_medicos_sul_especialidade == "Total"){
       
       medicos_sul_mes <- atendimentos_med_sul_mes  %>%
-       filter(ESPECIALIDADE == "Total") 
+       filter(ESPECIALIDADE == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+          
       
       a<-ggplot(medicos_sul_mes, aes(x = as.factor(DATA))) + 
-        geom_col(aes(y = QUANTIDADE, fill = VARIAVEL))+ 
+        geom_col(aes(y = QUANTIDADE, fill = QUANTIDADE))+ 
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        geom_hline(yintercept = 10125,col = "red", size = 0.5)+
+        geom_hline(yintercept = 9000, col = "red", size = 0.5)+
+        geom_hline(yintercept = 7875, col = "red", size = 0.5)+
+        geom_hline(yintercept = 6750, col = "red", size = 0.5)+
+        geom_hline(yintercept = 5625, col = "red", size = 0.5)+
+        geom_hline(yintercept = 4500, col = "red", size = 0.5)+
+        geom_hline(yintercept = 3375, col = "red", size = 0.5)+
+        geom_hline(yintercept = 2250, col = "red", size = 0.5)+
+        scale_y_continuous(breaks = c(0, 2250,3375,4500,5625,6750,7875,9000,10125,11000,12000,13000,14000,15000),limits=c(0,16000))
       
       
     }else{
@@ -2637,7 +2642,8 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))}
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))}
     
     
     ggplotly(a)
@@ -2657,7 +2663,9 @@ server <- function(input, output, session) {
     }else if (input$num_atd_medicos_sul_especialidade == "Total"){
       
       medicos_sul_mes <- atendimentos_med_sul_mes  %>%
-       filter(ESPECIALIDADE == "Total") 
+       filter(ESPECIALIDADE == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+          
       
     }else{
       
@@ -3296,19 +3304,32 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))
       
     }else if (input$num_atd_classificacao_sul_tipo == "Total"){
       
       atendimentos_classificacao_sul_mes <- atendimentos_classificacao_sul_mes  %>%
-       filter(CLASSIFICACAO == "Total") 
+       filter(CLASSIFICACAO == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+          
       
       a<-ggplot(atendimentos_classificacao_sul_mes, aes(x = as.factor(DATA))) + 
-        geom_col(aes(y = QUANTIDADE, fill = VARIAVEL))+ 
+        geom_col(aes(y = QUANTIDADE, fill = QUANTIDADE))+ 
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        geom_hline(yintercept = 10125,col = "red", size = 0.5)+
+        geom_hline(yintercept = 9000, col = "red", size = 0.5)+
+        geom_hline(yintercept = 7875, col = "red", size = 0.5)+
+        geom_hline(yintercept = 6750, col = "red", size = 0.5)+
+        geom_hline(yintercept = 5625, col = "red", size = 0.5)+
+        geom_hline(yintercept = 4500, col = "red", size = 0.5)+
+        geom_hline(yintercept = 3375, col = "red", size = 0.5)+
+        geom_hline(yintercept = 2250, col = "red", size = 0.5)+
+        scale_y_continuous(breaks = c(0, 2250,3375,4500,5625,6750,7875,9000,10125,11000,12000,13000,14000,15000),limits=c(0,16000))
+      
       
       
     }else{
@@ -3321,7 +3342,8 @@ server <- function(input, output, session) {
         ylab("  ")+
         xlab("  ")+
         theme_classic()+
-        theme(axis.text.x = element_text(angle = 90, hjust = 1))}
+        theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+        scale_y_continuous(breaks = c(0, 5000,10000,15000),limits=c(0,16000))}
     
     
     ggplotly(a)
@@ -3340,7 +3362,9 @@ server <- function(input, output, session) {
     }else if (input$num_atd_classificacao_sul_tipo == "Total"){
       
       atendimentos_classificacao_sul_mes <- atendimentos_classificacao_sul_mes  %>%
-       filter(CLASSIFICACAO == "Total") 
+       filter(CLASSIFICACAO == "Total")%>%
+       filter(VARIAVEL == "PRODUZIDO") #retirando a duplicação do Total, produzido pela variável DÉFCIT UPA PORTE 8
+          
       
 
     }else{
@@ -3979,7 +4003,7 @@ server <- function(input, output, session) {
   
   
   ###########################################################################################
-  #Dashboard Odontologia UPA Sul  
+  #Dashboard Odontologia UPA Sul 
   ###########################################################################################
   
   #gráfico de odontologia no sul por mês
@@ -4294,6 +4318,7 @@ server <- function(input, output, session) {
           "<b>Fórmula:</b> Mediana do tempo de espera (em minutos) por atendimentos odontológicos da UPA, por Hora do Dia" , "<br>")
     
   })
+  
   
   
 }    
